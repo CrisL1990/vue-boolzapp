@@ -190,6 +190,8 @@ main{
 /*Fine Chat*/
 
 /*Contenuto di Main*/
+
+/*Inizio Main Top*/
 #top, #write{
     height: 10%;
     width: 100%;
@@ -199,18 +201,6 @@ main{
 
 #top{
     background-color: rgb(234, 234, 234);
-}
-
-#write{
-    background-color: rgb(243, 238, 233);
-   
-}
-
-#messages{
-    height: 80%;
-    width: 100%;
-    overflow-y: scroll;
-    background-image: url("img/mine.jpg");
 }
 
 .last-access{
@@ -232,6 +222,71 @@ main{
     align-items: center;
     padding-right: 15px;
 }
+/*Fine Main Top*/
+
+/*Inizio Main Converstation*/
+
+.user-messages, .interlocutor-messages{
+    min-height: 50px;
+    width: 100%;
+    display: flex;
+    padding: 10px 100px;
+}
+
+.user-messages{
+    justify-content: right;
+}
+
+.interlocutor-messages{
+    justify-content: start;
+}
+
+.conversation-container{
+    margin-top: 50px;
+}
+
+.single-msg{
+    background-color: rgb(213, 249, 186);
+    border-radius: 10px;
+    min-width: 100px;
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.single-answer{
+    background-color: white;
+    border-radius: 10px;
+    min-width: 100px;
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+}
+/*Fine Main Converstation*/
+
+
+
+
+/*Inizio Main Bottom*/
+#write{
+    background-color: rgb(243, 238, 233);
+   
+}
+
+#messages{
+    height: 80%;
+    width: 100%;
+    overflow-y: scroll;
+    background-image: url("img/mine.jpg");
+}
+
+
 
 #emoji, #rec{
     height: 100%;
@@ -266,3 +321,4 @@ main{
     font-size: 18px
 
 }
+/*Fine Main Bottom*/
