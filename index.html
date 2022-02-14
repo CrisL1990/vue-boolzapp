@@ -57,17 +57,19 @@
 
                 <!--Inizio anteprima chat-->
                 <div id="conversations">
+                    
                     <!--Inizio singola chat-->
-                    <div class="contacts">
+                    <div v-for="(item, index) in contacts" class="contacts">
                         <div class="avatar">
                             <img class="avatar-img" src="img/avatar_1.jpg" alt="user img">
                         </div>
                         <div class="chat-info">
-                            <div class="main-txt">Michele</div>
-                            <div class="chat-preview">Messaggio</div>
+                            <div class="main-txt"></div>
+                            <div class="chat-preview"></div>
                         </div>
                     </div>
                     <!--Fine singola chat-->
+                
                            
                 </div>
                  <!--Fine anteprima chat--> 

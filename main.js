@@ -3,6 +3,7 @@ const root = new Vue({
     el: "#root",
 
     data:{
+        
 
         contacts: [
 
@@ -30,7 +31,7 @@ const root = new Vue({
                 ],
                 
             },
-
+            
             {
                 name: "Fabio",
                 avatar: '_2',
@@ -108,3 +109,4 @@ const root = new Vue({
         
     }
 })
+
