@@ -18,7 +18,7 @@
 
                 <!--Inizio Utente-->
                 <div id="user" class="bkgGray">
-                    <div class="avatar">
+                    <div @click="msgsViewer" class="avatar">
                         <img class="avatar-img" src="img/avatar_io.jpg" alt="user img">
                     </div>
                     <span class="nomeUtente">Nome Utente</span>
@@ -59,7 +59,7 @@
                 <div id="conversations">
                     
                     <!--Inizio singola chat-->
-                    <div v-for="(item, index) in contacts" class="contacts">
+                    <div v-for="(item, index) in contacts" @click="selectConversation(index); msgsViewer(index)" class="contacts">
                         <div class="avatar">
                             <img class="avatar-img" :src="'img/avatar' + item.avatar + '.jpg'" alt="user img">
                         </div>
@@ -79,11 +79,11 @@
                 
                 <div id="top">
                     <div class="avatar">
-                        <img class="avatar-img" src="img/avatar_1.jpg" alt="user img">
+                        <img class="avatar-img" :src="imgName" alt="user img">
                     </div>
 
                     <div class="last-access">
-                        <div class="main-txt">Michele</div>
+                        <div class="main-txt">{{contactName}}</div>
                         <div class="accesso">Ultimo accesso</div>
                         <div class="time">Orario</div>
                     </div>
@@ -98,27 +98,21 @@
                 <div id="messages">
                     <div class="conversation-container">
 
-                        <div class="user-messages">
-                            <div class="single-msg">
-                                No
+                        <div v-for="(item, index) in contacts">
+                            <div v-if="item.visible == false" v-for="(message, i) in item.messages" class="user-messages">
+                                <div class="single-msg">
+                                    {{message.text}}
+                                </div>
                             </div>
                         </div>
-                        <div class="user-messages">
-                            <div class="single-msg">
-                                No
-                            </div>
-                        </div>
-                      
+                        
+
                         <div class="interlocutor-messages">
                             <div class="single-answer">
                                 Hai portato a spasso il cane?
                             </div>
                         </div>
-                        <div class="interlocutor-messages">
-                            <div class="single-answer">
-                                Hai portato a spasso il cane?
-                            </div>
-                        </div>
+
                     </div>
 
                     

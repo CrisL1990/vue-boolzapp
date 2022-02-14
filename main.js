@@ -4,7 +4,9 @@ const root = new Vue({
 
     data:{
         
-
+        imgName: "img/avatar_1.jpg",
+        contactName: "Michele",
+    
         contacts: [
 
             {
@@ -107,7 +109,17 @@ const root = new Vue({
 
     methods:{
         
-       
+        selectConversation: function(index){
+            this.imgName = "img/avatar" + this.contacts[index].avatar + ".jpg";
+            
+        },
+
+        msgsViewer: function(index){
+        
+            if(this.contacts[index].visible = true){
+                this.contacts[index].visible = false;
+            }  
+        }
     }
 })
 
