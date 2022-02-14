@@ -22,54 +22,242 @@ aside{
     width: 30%;
     height: 100%;
     float: left;
-    border: solid black 1px;
 }
 
 main{
     width: 70%;
     height: 100%;
     float: right;
-    border: solid black 1px;
+}
+
+.bkgGray{
+    background-color: rgb(234, 234, 234);
+}
+
+.main-txt{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.light-txt{
+   
+    color: rgb(78, 116, 133);
 }
 
 /*Contenuto di Aside*/
 #user, #notification{
     height: 10%;
     width: 100%;
-    border: solid black 1px;
 }
 
 #search{
     height: 8%;
     width: 100%;
-    border: solid black 1px;
 }
 
 #conversations{
     width: 100%;
     height: 72%;
     overflow-y: scroll;
-    border: solid black 1px;
-
 }
 
+.contacts:hover{
+    background-color: rgb(234, 234, 234);
+}
 .contacts{
     width: 100%;
     height: 85px;
-    border: solid black 1px;
+    display: flex;
+    align-items: center;
 }
+
+/*Inizio User*/
+#user{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-right: solid lightgray 1px;
+}
+
+.avatar{
+    height: 70px;
+    width: 70px;
+    margin-left: 10px;
+}
+
+.avatar-img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.nomeUtente{
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.icons i{
+    color: rgb(161, 161, 161);
+    margin: 0 8px;
+    font-size: 20px;
+}
+
+.icons{
+   margin-left: 150px;
+}
+/*Fine User*/
+
+/*Inizio Search*/
+#search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(251, 251, 251);
+}
+
+.search-cont{
+    width: 90%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border: solid lightgray 1px;
+}
+
+.fa-magnifying-glass, .fa-paperclip, .fa-ellipsis-vertical{
+    color: gray;
+    font-size: 25px;
+    margin:0 15px;
+
+}
+
+.input-txt{
+    height: 100%;
+    width: 85%;
+    border: none;
+}
+
+/*Fine Search*/
+
+/*Inizio Notifications*/
+#notification{
+    background-color: rgb(142, 218, 252);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+#bell{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin-left: 20px;
+    font-size: 30px;
+    color: rgb(142, 218, 252);
+}
+
+#not-txt{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+/*Inizio Chat*/
+.chat-info{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.chat-preview{
+    font-size: 15px;
+    color: gray;
+}
+/*Fine Chat*/
 
 /*Contenuto di Main*/
 #top, #write{
     height: 10%;
     width: 100%;
-    border: solid black 1px;
+    display: flex;
+    align-items: center; 
+}
 
+#top{
+    background-color: rgb(234, 234, 234);
+}
+
+#write{
+    background-color: rgb(243, 238, 233);
+   
 }
 
 #messages{
     height: 80%;
     width: 100%;
-    border: solid black 1px;
     overflow-y: scroll;
+    background-image: url("img/mine.jpg");
+}
+
+.last-access{
+    padding-left: 10px;
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.accesso, .time{
+    color: gray;
+}
+
+.operations{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+}
+
+#emoji, #rec{
+    height: 100%;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#msg-content{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.smile, .mic{
+    font-size: 30px;
+    color: gray;
+}
+
+#typing{
+    height: 80%;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#typing::placeholder{
+    color: lightgray;
+    font-size: 18px
+
 }

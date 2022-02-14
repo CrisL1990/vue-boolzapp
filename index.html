@@ -15,45 +15,82 @@
         <div id="app-view">
             
             <aside>
-                <div id="user">
 
+                <!--Inizio Utente-->
+                <div id="user" class="bkgGray">
+                    <div class="avatar">
+                        <img class="avatar-img" src="img/avatar_io.jpg" alt="user img">
+                    </div>
+                    <span class="nomeUtente">Nome Utente</span>
+                    <div class="icons">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i> 
+                    </div>
                 </div>
+                <!--Fine Utente-->
+
+                <!--Inizio Notifications-->
                 <div id="notification">
-
+                    <div id="bell">
+                        <i class="fa-solid fa-bell-slash"></i>
+                    </div>
+                    <div id="not-txt">
+                        <div class="main-txt">
+                            Ricevi notifiche di nuovi messaggi
+                        </div>
+                        <div>
+                            <a class="light-txt" href="#">Attiva notifiche desktop</a>
+                        </div>
+                    </div>
                 </div>
+                <!--Fine Notifications-->
+
+                <!--Inzio Search-->
                 <div id="search">
-
+                    <div class="search-cont">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input class="input-txt" type="text" placeholder="Cerca o inizia una nuova chat">
+                    </div>
                 </div>
+                <!--Fine Search-->
 
+                <!--Inizio anteprima chat-->
                 <div id="conversations">
-
+                    <!--Inizio singola chat-->
                     <div class="contacts">
+                        <div class="avatar">
+                            <img class="avatar-img" src="img/avatar_1.jpg" alt="user img">
+                        </div>
+                        <div class="chat-info">
+                            <div class="main-txt">Michele</div>
+                            <div class="chat-preview">Messaggio</div>
+                        </div>
                     </div>
-                    <div class="contacts">
-                    </div>
-                    <div class="contacts">
-                    </div>
-                    <div class="contacts">
-                    </div>
-                    <div class="contacts">
-                    </div>
-                    <div class="contacts">
-                    </div>
-                    <div class="contacts">
-                    </div>
-                    <div class="contacts">
-                    </div>
-                    <div class="contacts">
-                    </div>
-
-
+                    <!--Fine singola chat-->
+                           
                 </div>
+                 <!--Fine anteprima chat--> 
             </aside>
 
             <main>
                 
                 <div id="top">
-                    
+                    <div class="avatar">
+                        <img class="avatar-img" src="img/avatar_1.jpg" alt="user img">
+                    </div>
+
+                    <div class="last-access">
+                        <div class="main-txt">Michele</div>
+                        <div class="accesso">Ultimo accesso</div>
+                        <div class="time">Orario</div>
+                    </div>
+
+                    <div class="operations">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i> 
+                    </div>
                 </div>
 
                 <div id="messages">
@@ -62,6 +99,17 @@
                 
                 <div id="write">
 
+                    <div id="emoji">
+                        <i class="fa-regular fa-face-smile smile"></i>
+                    </div>
+
+                    <div id="msg-content">
+                        <input id="typing" placeholder="Scrivi un messaggio" type="text">
+                    </div>
+
+                    <div id="rec">
+                        <i class="fa-solid fa-microphone mic"></i>
+                    </div>
                 </div>
 
 
