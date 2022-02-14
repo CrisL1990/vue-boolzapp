@@ -3,3 +3,73 @@
     margin: 0;
     padding: 0;
 }
+
+/*Impostazioni generali*/
+#app-view{
+    width: 1500px;
+    min-width: 1000px;
+    height: 850px;
+    margin: 50px auto;
+}
+
+#app-view::after{
+    display: table;
+    content: "";
+    clear: both;
+}
+
+aside{
+    width: 30%;
+    height: 100%;
+    float: left;
+    border: solid black 1px;
+}
+
+main{
+    width: 70%;
+    height: 100%;
+    float: right;
+    border: solid black 1px;
+}
+
+/*Contenuto di Aside*/
+#user, #notification{
+    height: 10%;
+    width: 100%;
+    border: solid black 1px;
+}
+
+#search{
+    height: 8%;
+    width: 100%;
+    border: solid black 1px;
+}
+
+#conversations{
+    width: 100%;
+    height: 72%;
+    overflow-y: scroll;
+    border: solid black 1px;
+
+}
+
+.contacts{
+    width: 100%;
+    height: 85px;
+    border: solid black 1px;
+}
+
+/*Contenuto di Main*/
+#top, #write{
+    height: 10%;
+    width: 100%;
+    border: solid black 1px;
+
+}
+
+#messages{
+    height: 80%;
+    width: 100%;
+    border: solid black 1px;
+    overflow-y: scroll;
+}
