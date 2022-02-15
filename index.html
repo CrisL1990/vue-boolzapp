@@ -65,7 +65,7 @@
                         </div>
                         <div class="chat-info">
                             <div class="main-txt">{{item.name}}</div>
-                            <div class="chat-preview">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit earum veritatis non perferendis illo eum dolorum quasi quas facilis repellendus nam sed ipsa, excepturi saepe ullam a consectetur possimus fugiat?</div>
+                            <div class="chat-preview">Ciao</div>
                         </div>
                     </div>
                     <!--Fine singola chat-->
@@ -97,20 +97,14 @@
 
                 <div id="messages">
                     <div class="conversation-container">
-
                         <div v-for="message in contacts[indice].messages" :class="active" class="user-messages">
-                            <div class="single-msg">
+                            <div :class="message.status == 'sent' ? 'sent' : 'received'">
                                 {{message.text}}
-                            </div> 
-        
-                        </div>
-                    
-                        <div v-if="answer != ''" class="interlocutor-messages">
-                            <div class="single-answer">
-                                {{answer}}
+                                <div class="date">testo provvisorio</div>
                             </div>
+                            
                         </div>
-
+                        
                     </div>
 
                     
@@ -123,7 +117,7 @@
                     </div>
 
                     <div id="msg-content">
-                        <input v-model="newMsg" @keyup.enter="sendMessage" id="typing" placeholder="Scrivi un messaggio" type="text">
+                        <input v-model="newMsg" @keyup.enter="sendMessage(indice)" id="typing" placeholder="Scrivi un messaggio" type="text">
                     </div>
 
                     <div id="rec">

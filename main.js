@@ -8,7 +8,7 @@ const root = new Vue({
         imgName: "img/avatar_1.jpg",
         indice: 0,
         newMsg: "",
-        answer: "",
+        prova: "",
         contacts: [
 
             {
@@ -20,17 +20,17 @@ const root = new Vue({
                     {
                         date: '10/01/2020 15:30:55',
                         text: 'Hai portato a spasso il cane?',
-                        statue: 'sent'
+                        status: 'sent'
                     },
                     {
                         date: '10/01/2020 15:30:55',
                         text: 'Hai portato a spasso il cane?',
-                        statue: 'sent'
+                        status: 'sent'
                     },
                     {
                         date: '10/01/2020 15:30:55',
                         text: 'Hai portato a spasso il cane?',
-                        statue: 'received'
+                        status: 'received'
                     }
                 ],
                 
@@ -45,17 +45,17 @@ const root = new Vue({
                     {
                         date: '10/01/2020 15:30:55',
                         text: 'Hai fatto la spesa?',
-                        statue: 'sent'
+                        status: 'sent'
                     },
                     {
                         date: '10/01/2020 15:30:55',
                         text: 'Hai fatto la spesa?',
-                        statue: 'received'
+                        status: 'received'
                     },
                     {
                         date: '10/01/2020 15:30:55',
                         text: 'Hai fatto la spesa?',
-                        statue: 'sent'
+                        status: 'sent'
                     }
                 ],
                 
@@ -70,17 +70,17 @@ const root = new Vue({
                     {
                         date: '10/01/2020 15:30:55',
                         text: 'Hai tagliato la legna?',
-                        statue: 'received'
+                        status: 'received'
                     },
                     {
                         date: '10/01/2020 15:30:55',
                         text: 'Hai tagliato la legna?',
-                        statue: 'sent'
+                        status: 'sent'
                     },
                     {
                         date: '10/01/2020 15:30:55',
                         text: 'Hai tagliato la legna?',
-                        statue: 'received'
+                        status: 'received'
                     }
                 ],
                 
@@ -95,12 +95,12 @@ const root = new Vue({
                     {
                         date: '10/01/2020 15:30:55',
                         text: 'Hai preso la pasta?',
-                        statue: 'sent'
+                        status: 'sent'
                     },
                     {
                         date: '10/01/2020 15:30:55',
                         text: 'Hai preso la pasta?',
-                        statue: 'received'
+                        status: 'received'
                     },
 
                 ],
@@ -124,25 +124,18 @@ const root = new Vue({
             return this.active;
         },
 
-        sendMessage: function(){
-
-           
-
+        sendMessage: function(i){
             let newObject = {
                 date: '10/01/2020 15:30:55',
                 text: this.newMsg,
-                statue: 'received'
+                statue: 'sent'
+            };
+            if(newObject.text != ""){
+                this.contacts[i].messages.push(newObject);
             }
-
-            this.contacts[this.indice].messages.push(newObject);
-            
-            let that = this;
-            setTimeout(function(){
-                that.answer = "Ok";
-            }, 1000)
-            
         },
 
+        
     }
 })
 
