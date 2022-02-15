@@ -83,7 +83,7 @@
                     </div>
 
                     <div class="last-access">
-                        <div class="main-txt">{{contactName}}</div>
+                        <div class="main-txt">{{contacts[indice].name}}</div>
                         <div class="accesso">Ultimo accesso</div>
                         <div class="time">Orario</div>
                     </div>
@@ -98,16 +98,16 @@
                 <div id="messages">
                     <div class="conversation-container">
 
-                        <div v-for="msg in miaLista" v-if="active == 'active'" :class="active" class="user-messages">
+                        <div v-for="message in contacts[indice].messages" :class="active" class="user-messages">
                             <div class="single-msg">
-                                {{msg}}
+                                {{message.text}}
                             </div> 
         
                         </div>
                     
-                        <div class="interlocutor-messages">
+                        <div v-if="answer != ''" class="interlocutor-messages">
                             <div class="single-answer">
-                              
+                                {{answer}}
                             </div>
                         </div>
 
@@ -123,7 +123,7 @@
                     </div>
 
                     <div id="msg-content">
-                        <input id="typing" placeholder="Scrivi un messaggio" type="text">
+                        <input v-model="newMsg" @keyup.enter="sendMessage" id="typing" placeholder="Scrivi un messaggio" type="text">
                     </div>
 
                     <div id="rec">

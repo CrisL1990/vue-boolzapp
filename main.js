@@ -6,9 +6,9 @@ const root = new Vue({
         
         active: "",
         imgName: "img/avatar_1.jpg",
-        contactName: "Michele",
-        miaLista: [],
-        
+        indice: 0,
+        newMsg: "",
+        answer: "",
         contacts: [
 
             {
@@ -112,27 +112,37 @@ const root = new Vue({
     methods:{
         
         selectConversation: function(index){
-            this.imgName = "img/avatar" + this.contacts[index].avatar + ".jpg";
-            this.contactName = this.contacts[index].name;
-
-            this.miaLista = [];
-
-            for(let i = 0; i < this.contacts[index].messages.length; i ++){
-                this.miaLista.push(this.contacts[index].messages[1].text);
-            }
-         
+            this.indice = index;
+            this.imgName = "img/avatar" + this.contacts[index].avatar + ".jpg";    
         },
 
         msgsViewer: function(){
             this.active = "";
-
             if(this.active == ""){
                 this.active = "active";
             }
-           
-          
             return this.active;
-        }
+        },
+
+        sendMessage: function(){
+
+           
+
+            let newObject = {
+                date: '10/01/2020 15:30:55',
+                text: this.newMsg,
+                statue: 'received'
+            }
+
+            this.contacts[this.indice].messages.push(newObject);
+            
+            let that = this;
+            setTimeout(function(){
+                that.answer = "Ok";
+            }, 1000)
+            
+        },
+
     }
 })
 
