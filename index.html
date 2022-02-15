@@ -65,7 +65,7 @@
                         </div>
                         <div class="chat-info">
                             <div class="main-txt">{{item.name}}</div>
-                            <div class="chat-preview"></div>
+                            <div class="chat-preview">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit earum veritatis non perferendis illo eum dolorum quasi quas facilis repellendus nam sed ipsa, excepturi saepe ullam a consectetur possimus fugiat?</div>
                         </div>
                     </div>
                     <!--Fine singola chat-->
@@ -98,15 +98,12 @@
                 <div id="messages">
                     <div class="conversation-container">
 
-                        <div v-for="(item, index) in contacts">
-                            <div v-if="item.visible == false" v-for="(message, i) in item.messages" class="user-messages">
-                                <div class="single-msg">
-                                    {{message.text}}
-                                </div>
-                            </div>
+                        <div v-if="active == 'active'" :class="active" class="user-messages">
+                            <div class="single-msg">
+                                {{selectConversation[1]}}
+                            </div>  
                         </div>
-                        
-
+                    
                         <div class="interlocutor-messages">
                             <div class="single-answer">
                                 Hai portato a spasso il cane?

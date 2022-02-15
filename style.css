@@ -5,14 +5,16 @@
 }
 
 body{
-    background-color: rgb(220, 219, 210);
+   /* background-color: rgb(220, 219, 210);*/
+    background-image: linear-gradient(180deg, #1c9588 15%, #dadbd4 15%);
+    height: 95vh;
 }
 
 /*Impostazioni generali*/
 #app-view{
     width: 1500px;
     min-width: 1000px;
-    height: 850px;
+    height: 900px;
     margin: 50px auto;
 }
 
@@ -129,6 +131,7 @@ main{
     justify-content: space-between;
     background-color: white;
     border: solid lightgray 1px;
+    border-radius: 2px;
 }
 
 .fa-magnifying-glass, .fa-paperclip, .fa-ellipsis-vertical{
@@ -141,6 +144,7 @@ main{
 .input-txt{
     height: 100%;
     width: 85%;
+    padding: 10px;
     border: none;
 }
 
@@ -186,6 +190,11 @@ main{
 .chat-preview{
     font-size: 15px;
     color: gray;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 200px;
+  
 }
 /*Fine Chat*/
 
@@ -309,7 +318,7 @@ main{
 }
 
 #typing{
-    height: 80%;
+    height: 70%;
     width: 100%;
     border: none;
     padding: 15px;
