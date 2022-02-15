@@ -128,12 +128,22 @@ const root = new Vue({
             let newObject = {
                 date: '10/01/2020 15:30:55',
                 text: this.newMsg,
-                statue: 'sent'
+                status: 'sent'
             };
             if(newObject.text != ""){
                 this.contacts[i].messages.push(newObject);
+                setTimeout(this.answer, 1000);
             }
         },
+
+        answer: function(){
+            let newObject = {
+                date: '10/01/2020 15:30:55',
+                text: "Ok",
+                status: 'received'
+            };
+            this.contacts[this.indice].messages.push(newObject);
+        }
 
         
     }

@@ -262,6 +262,8 @@ main{
     text-align: right;
     color: gray;
     font-size: 15px;
+    
+    overflow-x: visible;
 }
 .conversation-container{
     margin-top: 50px;
