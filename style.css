@@ -235,7 +235,7 @@ main{
 
 /*Inizio Main Converstation*/
 
-.user-messages, .interlocutor-messages{
+.user-messages{
     min-height: 50px;
     width: 100%;
     display: flex;
@@ -254,10 +254,16 @@ main{
 
 .sent, .received{
     min-height: 50px;
+    max-width: 500px;
     padding: 15px 20px;
     border-radius: 10px;
 }
 
+.text-container{
+    overflow-wrap: break-word;
+    min-height: 50px;
+    display: inline-block;
+}
 .date{
     text-align: right;
     color: gray;

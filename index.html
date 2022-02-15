@@ -98,7 +98,7 @@
                 <div id="messages">
                     <div class="conversation-container">
                         <div v-for="message in contacts[indice].messages" :class="active" class="user-messages">
-                            <div :class="message.status == 'sent' ? 'sent' : 'received'">
+                            <div class="text-container" :class="message.status == 'sent' ? 'sent' : 'received'">
                                 {{message.text}}
                                 <div class="date">testo provvisorio</div>
                             </div>

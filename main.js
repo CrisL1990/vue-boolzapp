@@ -134,6 +134,8 @@ const root = new Vue({
                 this.contacts[i].messages.push(newObject);
                 setTimeout(this.answer, 1000);
             }
+
+            this.newMsg = "";
         },
 
         answer: function(){
