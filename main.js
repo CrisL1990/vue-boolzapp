@@ -7,6 +7,7 @@ const root = new Vue({
         active: "",
         imgName: "img/avatar_1.jpg",
         contactName: "Michele",
+        miaLista: [],
         
         contacts: [
 
@@ -114,13 +115,11 @@ const root = new Vue({
             this.imgName = "img/avatar" + this.contacts[index].avatar + ".jpg";
             this.contactName = this.contacts[index].name;
 
-            let msgsList = [];
-
+          
             for(let i = 0; i < this.contacts[index].messages.length; i ++){
-                msgsList.push(this.contacts[index].messages[1].text);
+                this.miaLista.push(this.contacts[index].messages[1].text);
             }
-            console.log(msgsList);
-            return msgsList;   
+         
         },
 
         msgsViewer: function(){
@@ -130,9 +129,10 @@ const root = new Vue({
                 this.active = "active";
             }
            
-            console.log(this.active);
+          
             return this.active;
         }
     }
 })
+
 

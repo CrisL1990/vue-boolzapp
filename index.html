@@ -98,10 +98,11 @@
                 <div id="messages">
                     <div class="conversation-container">
 
-                        <div v-if="active == 'active'" :class="active" class="user-messages">
+                        <div v-for="msg in miaLista" v-if="active == 'active'" :class="active" class="user-messages">
                             <div class="single-msg">
-                                {{selectConversation[1]}}
-                            </div>  
+                                {{msg}}
+                            </div> 
+        
                         </div>
                     
                         <div class="interlocutor-messages">
