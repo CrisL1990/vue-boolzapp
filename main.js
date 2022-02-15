@@ -115,7 +115,8 @@ const root = new Vue({
             this.imgName = "img/avatar" + this.contacts[index].avatar + ".jpg";
             this.contactName = this.contacts[index].name;
 
-          
+            this.miaLista = [];
+
             for(let i = 0; i < this.contacts[index].messages.length; i ++){
                 this.miaLista.push(this.contacts[index].messages[1].text);
             }
