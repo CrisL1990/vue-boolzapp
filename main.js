@@ -127,7 +127,7 @@ const root = new Vue({
 
         sendMessage: function(i){
             let newObject = {
-                date: '10/01/2020 15:30:55',
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 text: this.newMsg,
                 status: 'sent'
             };
@@ -141,7 +141,7 @@ const root = new Vue({
 
         answer: function(){
             let newObject = {
-                date: '10/01/2020 15:30:55',
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 text: "Ok",
                 status: 'received'
             };
