@@ -8,7 +8,8 @@ const root = new Vue({
         imgName: "img/avatar_1.jpg",
         indice: 0,
         newMsg: "",
-        prova: "",
+        search: "",
+        myList: [],
         contacts: [
 
             {
@@ -113,7 +114,7 @@ const root = new Vue({
         
         selectConversation: function(index){
             this.indice = index;
-            this.imgName = "img/avatar" + this.contacts[index].avatar + ".jpg";    
+            this.imgName = "img/avatar" + this.contacts[index].avatar + ".jpg"; 
         },
 
         msgsViewer: function(){
@@ -145,10 +146,37 @@ const root = new Vue({
                 status: 'received'
             };
             this.contacts[this.indice].messages.push(newObject);
-        }
+        },
+        
+        
+        doSearch: function(){
+            let name = "";
+            this.search.toLocaleLowerCase();
+            let lettereUguali = [];
+           
+            for(let i = 0; i < this.contacts.length; i++){
 
+                name = this.contacts[i].name;
+                let lowerName = name.toLocaleLowerCase()
+                let lowerSearch = this.search.toLocaleLowerCase()
+          
+
+                for(let letter = 0; letter < lowerName.length; letter++){
+                    if(lowerName[letter] == lowerSearch){
+                        lettereUguali.push(lowerName[letter]);
+                    }
+
+                }
+
+                if(lettereUguali.length == 0){
+                    this.contacts[i].visible = false;
+                };
+                lettereUguali = []; 
+             
+            }
+        }   
+    
         
     }
 })
-
 
