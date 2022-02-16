@@ -65,7 +65,10 @@
                         </div>
                         <div class="chat-info">
                             <div class="main-txt">{{item.name}}</div>
-                            <div class="chat-preview">Ciao</div>
+                            <div class="chat-preview">
+                                {{contacts[index].messages.slice(-1)[0].text}}
+                                <div class="last-msg">Ultimo accesso: {{contacts[index].messages.slice(-1)[0].date}}</div>
+                            </div>
                         </div>
                     </div>
                     <!--Fine singola chat-->
@@ -84,7 +87,7 @@
 
                     <div class="last-access">
                         <div class="main-txt">{{contacts[indice].name}}</div>
-                        <div class="accesso">{{contacts[indice].messages[0].date}}</div>
+                        <div class="accesso">{{contacts[indice].messages.slice(-1)[0].date}}</div>
                         <div class="time">Orario</div>
                     </div>
 

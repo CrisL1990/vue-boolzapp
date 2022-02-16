@@ -200,6 +200,10 @@ main{
 .hide{
     display: none;
 }
+
+.last-msg{
+    font-size: 12px;
+}
 /*Fine Chat*/
 
 /*Contenuto di Main*/
