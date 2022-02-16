@@ -150,29 +150,14 @@ const root = new Vue({
         
         
         doSearch: function(){
-            let name = "";
-            this.search.toLocaleLowerCase();
-            let lettereUguali = [];
-           
+            
             for(let i = 0; i < this.contacts.length; i++){
-
-                name = this.contacts[i].name;
-                let lowerName = name.toLocaleLowerCase()
-                let lowerSearch = this.search.toLocaleLowerCase()
-          
-
-                for(let letter = 0; letter < lowerName.length; letter++){
-                    if(lowerName[letter] == lowerSearch){
-                        lettereUguali.push(lowerName[letter]);
-                    }
-
+                if(this.contacts[i].name.toLowerCase().includes(this.search.toLowerCase())){
+                    this.contacts[i].visible = true;
                 }
-
-                if(lettereUguali.length == 0){
+                else{
                     this.contacts[i].visible = false;
-                };
-                lettereUguali = []; 
-             
+                }
             }
         }   
     
